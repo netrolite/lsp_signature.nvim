@@ -886,7 +886,6 @@ M.on_attach = function(cfg, bufnr)
   -- stylua ignore start
   api.nvim_command("augroup Signature")
   api.nvim_command("autocmd! * <buffer>")
-  api.nvim_command("autocmd InsertEnter <buffer> lua require'lsp_signature'.on_InsertEnter()")
   api.nvim_command("autocmd InsertLeave <buffer> lua require'lsp_signature'.on_InsertLeave()")
   api.nvim_command("autocmd InsertCharPre <buffer> lua require'lsp_signature'.on_InsertCharPre()")
   api.nvim_command("autocmd CompleteDone <buffer> lua require'lsp_signature'.on_CompleteDone()")
