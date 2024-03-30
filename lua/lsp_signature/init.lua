@@ -1061,6 +1061,7 @@ M.toggle_float_win = function()
   local line_to_cursor = line:sub(1, pos[2])
   -- Try using the already binded one, otherwise use it without custom config.
   -- LuaFormatter off
+  start_watch_changes_timer()
   vim.lsp.buf_request(
     0,
     "textDocument/signatureHelp",
